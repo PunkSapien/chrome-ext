@@ -10,23 +10,34 @@
     "48": "/icons/icon48.png",
     "192": "/icons/icon192.png"
   },
-  "permissions": ["activeTab", "cookies", "tabs"],
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "tabs"
+  ],
   "web_accessible_resources": [
     {
-      "resources": ["index.html"],
-      "matches": ["*://*.instagram.com/*"]
+      "resources": [
+        "index.html"
+      ],
+      "matches": [
+        "*://*.instagram.com/*"
+      ]
     }
   ],
   "content_scripts": [
     {
-      "matches": ["*://*.instagram.com/*"],
-      "js": ["inject.js"]
+      "matches": [
+        "*://*.instagram.com/*"
+      ],
+      "js": [
+        "inject.js"
+      ]
     }
   ],
-  "host_permissions": ["*://*.instagram.com/*"],
-  "action": {
-    "default_popup": "index.html"
-  },
+  "host_permissions": [
+    "*://*.instagram.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   }
